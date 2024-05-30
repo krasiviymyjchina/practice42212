@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FlightPool</title>
+    <style>
+      body {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(68, 67, 129);
+        font-family: Merriweather;
+        display: flex;
+        width: 960px;
+        margin: 0 auto;
+      }
+      header {
+        background-color: rgb(68, 67, 129);
+        padding: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 300px;
+        border-radius: 10px;
+      }
+      nav {
+        /*окошко меню*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(68, 67, 129);
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      nav a {
+        /*стиль для ссылок меню*/
+        color: 03045e;
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .feature {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .container {
+        display: flex;
+      }
+      main {
+        width: 500px;
+        padding: 20px;
+        text-align: right;
+      }
+      .left {
+        width: 500px;
+        margin-right: 20px;
+        padding: 20px;
+        text-align: left;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #ffffff;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 10 px;
+        font-style: italic;
+        font-weight: bold;
+      }
+      .feature-box6 {
+        background-color: rgb(255, 255, 255);
+        padding: 20px; /*Расстояние от текста внутри рамки до самой этой рамки*/
+        border-radius: 10px; /*Закругление рамочки*/
+        width: 1000px; /* Ширина колонки */
+        height: 1800px; /*Длина колонки*/
+        text-align: center;
+        margin-bottom: 10px; /*Расстояние от рамочки до окружающих элементов снизу*/
+      }
+      .feature-box2 {
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 10px;
+        width: 600px; /* Ширина колонки */
+        height: 600px; /*Длина колонки*/
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .feature-box1 {
+        background-color: rgb(255, 255, 255);
+        padding: 20px; /*Расстояние от текста внутри рамки до самой этой рамки*/
+        border-radius: 10px; /*Закругление рамочки*/
+        width: 1000px; /* Ширина колонки */
+        height: 700px; /*Длина колонки*/
+        text-align: center;
+        margin-bottom: 10px; /*Расстояние от рамочки до окружающих элементов снизу*/
+      }
+      .slider-container {
+        position: relative;
+        width: 800px;
+        height: 500px;
+        margin: 0 auto;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slider img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .prev-button,
+      .next-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        font-size: 24px;
+        color: rgb(0, 0, 0);
+      }
+
+      .prev-button {
+        left: 10px;
+      }
+
+      .next-button {
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>FlightPool</h1>
+      <img src="flc_design20240530232952.jpg" width="300" alt="" />
+    </header>
+    <nav>
+      <a href="#akci"> <b>Акции</b></a>
+      <a href="#poisk"> <b>Поиск</b></a>
+      <a href="register.html"> <b>Личный кабинет</b></a>
+    </nav>
+
+    <div class="feature-box6">
+      <h3>
+        Когда вы путешествуете с нашей авиакомпанией, каждый пятый билет
+        приобретается со скидкой 20%.
+      </h3>
+      <p><img src="scale_1200.jpg" width="400" alt="" /></p>
+      <p>
+        Используйте нашу авиакомпанию для ваших путешествий, где каждый
+        пятый билет приобретается со скидкой %! Насладитесь комфортом
+        полёта, великолепным обслуживанием и экономьте каждый раз, когда летите
+        с нами. Позвольте себе больше приключений, оставляя деньги на другие
+        удовольствия во время вашей поездки!
+      </p>
+
+      <h3>
+        Если при путешествие Вы будете использовать услугу только ручной клади,
+        то на 3 поездку вы сможете взять полноценный багаж, не оплачивая его
+        транспортировку.
+      </h3>
+      <p>
+        <img src="SALE.jpeg" width="400" alt="" />
+      </p>
+      <p>
+        Приготовьтесь к невероятному приключению! Путешествуйте с нами,
+        используя только ручную кладь, и на третьем путешествии вас ждет
+        удивительный бонус — возможность взять с собой полноценный багаж без
+        дополнительной оплаты за его транспортировку. Представьте себе: вы
+        отправляетесь в путешествие легкими, без лишних забот о багаже, и на
+        третьем этапе вашего приключения вы можете взять с собой все
+        необходимое, не переживая за дополнительные расходы. Это идеальный
+        способ сделать ваше путешествие еще более удобным и приятным!
+      </p>
+
+      <h3>
+        Программа лояльности, расширение маршрутной сети и инфраструктурные обновления повышают комфорт и удобство пассажиров аэропорта.
+        Авиакомпании-партнеры представили новые эксклюзивные направления, увеличили частоту рейсов по популярным маршрутам и открыли в аэропорту новые возможности, включая уникальные маршруты в Кувейт, Кутаиси и Батуми.
+        Реконструкция перрона, открытие терминала T2 и двухуровневой эстакады расширили площадь аэропорта и улучшили логистику.
+        Новые услуги, такие как бизнес-зал "Горизонт", комната для матери и ребенка, ускоренная сортировка багажа, услуга парковки с профессиональным водителем и биометрическая оплата проезда в терминале "Аэроэкспресс", повышают удобство для пассажиров.
+      </h3>
+      <p>
+        <img
+          src="horizon-wing-cloud-sky-atmosphere-flying-travel-airplane-aircraft-vehicle-airline-aviation-flight-peace-airliner-wings-azure-takeoff-jet-aircraft-the-landscape-image-view-the-air-air-travel-atmosphere-of-earth-wide.jpg"
+          width="600"
+          alt=""
+        />
+      </p>
+      <p>
+        Программа лояльности авиакомпании — это ключ к миру невероятных
+        возможностей! Каждый ваш перелет становится шагом к новым приключениям и
+        удивительным открытиям. Накапливайте мили, словно собирая звезды на
+        небе, и мечты станут ближе.
+      </p>
+      <p>
+        С помощью накопленных миль вы сможете не только снизить стоимость
+        будущих перелетов, но и преобразить свой опыт путешествия. Поднимитесь
+        на новый уровень, обновив класс обслуживания на борту самолета.
+        Почувствуйте себя VIP-пассажиром, наслаждаясь сервисом и
+        удобствами.
+      </p>
+      <p>
+        Программа лояльности — это не просто набор бонусов, это возможность
+        превратить каждое ваше путешествие в приключение.
+      </p>
+    </div>
+    <h1>Наш экипаж</h1>
+    <div class="slider">
+      <main1>
+        <div class="slider-container">
+          <div class="slider">
+            <img
+              src="647f189b594fc25c2f3eb960ac3ad831.jpg"
+              alt=""
+            />
+            <img src="airplane-flying-over-snowcapped-mountains-against-sky_1048944-28272168.avif" alt="" />
+            <img src="tomato-juice-tomatoes-tray-airplane-light-from-window-illuminates-scene_38187-3963.jpg" alt="" />
+            <img
+              src="dsf34.png"
+              alt=""
+            />
+          </div>
+          <button class="prev-button" aria-label="Посмотреть предыдущий слайд">
+            &lt;
+          </button>
+          <button class="next-button" aria-label="Посмотреть следующий слайд">
+            &gt;
+          </button>
+        </div>
+      </main1>
+    </div>
+    <script>
+      const slider = document.querySelector(".slider");
+      const prevButton = document.querySelector(".prev-button");
+      const nextButton = document.querySelector(".next-button");
+      const slides = Array.from(slider.querySelectorAll("img"));
+      const slideCount = slides.length;
+      let slideIndex = 0;
+
+      // Устанавливаем обработчики событий для кнопок
+      prevButton.addEventListener("click", showPreviousSlide);
+      nextButton.addEventListener("click", showNextSlide);
+
+      // Функция для показа предыдущего слайда
+      function showPreviousSlide() {
+        slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+        updateSlider();
+      }
+
+      // Функция для показа следующего слайда
+      function showNextSlide() {
+        slideIndex = (slideIndex + 1) % slideCount;
+        updateSlider();
+      }
+
+      // Функция для обновления отображения слайдера
+      function updateSlider() {
+        slides.forEach((slide, index) => {
+          if (index === slideIndex) {
+            slide.style.display = "block";
+          } else {
+            slide.style.display = "none";
+          }
+        });
+      }
+      // Инициализация слайдера
+      updateSlider();
+    </script>
+    <section id="poisk">
+      <div class="feature-box2">
+        <h3>Поиск</h3>
+        <form action="search.html">
+          <p>
+            Город отправления
+            <select name="" id="" required>
+              <option value="">...</option>
+              <option value="">Санкт-Петербург</option>
+              <option value="">Москва</option>
+              <option value="">Новосибирск</option>
+              <option value="">Казань</option>
+            </select>
+          </p>
+          <p>
+            Город прибытия
+            <select name="" id="" required>
+              <option value="">...</option>
+              <option value="">Санкт-Петербург</option>
+              <option value="">Москва</option>
+              <option value="">Новосибирск</option>
+              <option value="">Казань</option>
+            </select>
+          </p>
+          <p>Дата вылета <input type="Date" required /></p>
+          
+          <p>Дата прилёта <input type="Date" required /></p>
+          <p>
+            Количество пассажиров
+            
+            <select name="" id="" required>
+              <option value="">0</option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+              <option value="">6</option>
+              <option value="">7</option>
+              <option value="">8</option>
+              <option value="">9</option>
+              <option value="">10</option>
+              <option value="">11</option>
+            </select>
+          </p>
+          <p>
+            <p>
+              Количество Животных
+              
+              <select name="" id="" required>
+                <option value="">0</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+                <option value="">10</option>
+                <option value="">11</option>
+              </select>
+            </p>
+            <p>
+              Количество билетов
+              
+              <select name="" id="" required>
+                <option value="">0</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+                <option value="">10</option>
+                <option value="">11</option>
+              </select>
+            </p>
+            <p>
+              Количество багажа
+              
+              <select name="" id="" required>
+                <option value="">0</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+                <option value="">10</option>
+                <option value="">11</option>
+              </select>
+            </p>
+            <p>
+            <a href="search.html">
+              <input
+                style="background-color: rgba(255, 255, 255, 0.767)"
+                type="submit"
+                value="Найти билеты"
+            /></a>
+          </p>
+          <p><img src="1614645232_36-p-fon-samoleti-dlya-fotoshopa-46.jpg" width="300" alt="" /></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="akci">
+      <div class="feature-box1">
+        <h2>Акции</h2>
+        <div class="container">
+          <aside class="left">
+            <h4>Акция для больших компаний</h4>
+            <p>
+              <img
+                src="a594da0ab9.jpg"
+                width="400"
+                alt=""
+              />
+            </p>
+            Для путешествий большой компанией или семьей воспользуйтесь акцией 4 + 1 = 4, которая действует в этом году. При покупке четырех билетов по полной стоимости получите пятый билет в подарок. Это отличная возможность отправиться в путешествие с родными и близкими.
+
+            Для специалистов направления wellbeing авиакомпании "Самолет" подарочные сертификаты обернулись головной болью и финансовыми потерями.
+            Из-за условий контрагента компания оплатила все сертификаты авансом, но лишь половина из них была реализована. Срок действия сертификатов составляет один год с момента активации, а неиспользованные подарки вернуть невозможно.
+            аким образом, компания понесла убытки от неиспользованных сертификатов, особенно в случае увольнения сотрудников, так и не воспользовавшихся своими подарками.
+            </p>
+          </aside>
+          <main>
+            <h4>Акции для пожилых путешественников</h4>
+            <p>
+              Если вы человек лет в возрасте от 65 лет и хотите побывать в
+              разных уголках мира, то мы с радостью предоставим вам эту
+              возможность. Наша авиакомпания предлагает вам 50% скидку на любые
+              перелёты. Между Москвой и городами: Санкт-Петербург/Нижний
+              Новгород/Казань/Пенза/Самара/Саратов/Нижнекамск/Уфа/Пермь/Архангельск/Ставрополь/Сыктывкар/Волгоград/Астрахань/Ульяновск/Ижевск/Оренбург/Апатиты/Махачкала/Мурманск/Грозный/Орск/Минеральные
+              Воды/Челябинск/Екатеринбург/Тюмень/Сургут/Ханты-Мансийск/Магнитогорск/Омск/Сочи/Новосибирск/Барнаул/Томск/Нижневартовск/Новокузнецк/Кемерово/Красноярск/Новый
+              Уренгой/Абакан/Иркутск/Чебоксары/Элиста
+            </p>
+            <p>
+              <img
+                src="bbf92769-f198-4fb6-97b1-1f11c53fa22d.jpeg"
+                width="400"
+                alt=""
+              />
+            </p>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <div class="feature-box3">
+      <h2>Отзывы</h2>
+      <h4>
+        <img
+          src="Screenshot_4.png"
+          alt="аватар"
+          align="middle"
+          width="100"
+          
+
+          <p>Александр Левин
+      </h4>
+      <p>
+        <style>
+  p
+  {
+    color: rgb(255, 255, 255);
+  }
+  </style>
+        Отличный опыт полета с Fligtpool! Обслуживание на высшем уровне,
+        комфортные кресла и вкусная еда. Рейс прошел гладко и без задержек.
+      </p>
+<style>
+  p
+  {
+    color: rgb(0, 0, 0);
+  }
+  </style>
+      <h4>
+        <img
+          src="мурад.png"
+          alt="аватар"
+          align="middle"
+          width="100"
+        />Мурад Легенда
+      </h4>
+      <p>
+        Fligtpool порадовал своим профессионализмом и внимательным отношением к
+        пассажирам. Рейс был пунктуальным, а самолет чистым и ухоженным.
+      </p>
+      <h4>
+        <img
+          src="Screenshot_1.png"
+          alt="аватар"
+          align="middle"
+          width="100"
+        />Наталья Морская Пехота
+      </h4>
+      <p>
+        Недавно летел с Fligtpool и остался очень доволен. Удобные места,
+        приветливый персонал и широкий выбор развлечений на борту. Рекомендую!
+      </p>
+      <h4>
+        <img
+          src="егор.png"
+          alt="аватар"
+          align="middle"
+          width="100"
+        />Егор Ефремов
+      </h4>
+      <p>
+        Fligtpool - отличный выбор для путешествий! Полет прошел без сбоев,
+        обслуживание было на высшем уровне. С удовольствием выберу эту
+        авиакомпанию снова. Не.
+      </p>
+      <h4>
+        <img
+          src="саша.png"
+          alt="аватар"
+          align="middle"
+          width="100"
+        />Александр Бородин
+      </h4>
+      <p>
+        Полет с Fligtpool был приятным и комфортным. Быстрое оформление
+        посадочных билетов, вежливый персонал и безопасное перемещение - все,
+        что нужно для спокойного путешествия.
+      </p>
+      <h4>
+        <img
+          src="тёма.png"
+          alt="аватар"
+          width="100"
+          align="middle"
+        />Годзилла
+      </h4>
+      <p>
+        Спасибо Fligtpool за отличный сервис и удобные условия полета. Приятный
+        бонус - вкусные закуски и напитки на борту. Очень рекомендую эту
+        авиакомпанию.
+      </p>
+    </div>
+    <div class="feature-box4">
+      <h4>Закрытые акции</h4>
+      <form action="">
+        <p>E-mail <input type="email" required /></p>
+        <p>
+          <input
+            style="background-color: rgba(97, 199, 240, 0.767)"
+            type="submit"
+            value="Подписаться"
+          />
+        </p>
+      </form>
+    </div>
+    <footer>
+      <p>FlightPool 8 (812) 525-52-52, Команда разработчиков: Соленков Д.</p>
+    </footer>
+  </body>
+</html>
